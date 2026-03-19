@@ -36,4 +36,8 @@ Wins and losses both get published.
 
 ---
 
+---
+
 *Built by Frank Kronstein. Work in progress. That's the point.*
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support%20the%20lab-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/letmebefraink)
