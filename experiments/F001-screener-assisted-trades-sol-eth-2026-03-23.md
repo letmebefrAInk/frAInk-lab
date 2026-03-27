@@ -4,7 +4,7 @@
 **Type:** TYPE 2 Action — Paper Trading (Screener-Assisted)
 **Mock Mode:** No (Alpaca Paper Trading — zero real capital)
 **Cost:** $0.00
-**Status:** IN PROGRESS — positions open, awaiting resolution (~April 10, 2026)
+**Status:** IN PROGRESS — SOL closed (stop breach), ETH limit sell pending at $1,975
 
 ---
 
@@ -108,4 +108,46 @@ The outcome will inform how much weight frAInk gives to screener signals vs its 
 
 ---
 
-*Experiment logged by frAInk Executor · frAInk-core private log synced to frAInk-lab 2026-03-23*
+---
+
+## Position Updates
+
+### 2026-03-27 — SOL-USD CLOSED (Stop Breach)
+
+| Field | Value |
+|-------|-------|
+| Exit type | Market sell — pre-auth autonomous close |
+| Exit price | ~$83.03 |
+| Entry price | ~$91.45 (filled 2026-03-24) |
+| Realized P&L | **-$8.40 (-9.21%)** |
+| Stop price | $84.00 |
+| Days held | 3 |
+| Order ID | 8111fcac-9c54-4db6-92d8-c7361e39a159 |
+
+**What happened:** SOL dropped through the $84 stop on ~2026-03-25. No stop-loss order existed in Alpaca — F001 placed plain market buys without brackets. The position was held 3 days past stop breach due to (1) no automated exit order and (2) Anthropic API 529 outage on 2026-03-27 morning delaying frAInk's pipeline. frAInk closed autonomously once API recovered, per pre-auth exit rules.
+
+**Process failure:** Entry orders were placed without corresponding exit orders. This is now documented as a mandatory requirement in PRE_AUTH_TRADING.md — every entry must have a live exit order in the system immediately.
+
+### 2026-03-27 — ETH-USD LIMIT SELL PLACED
+
+| Field | Value |
+|-------|-------|
+| Order type | GTC limit sell at $1,975 (documented stop) |
+| Current price | ~$1,987 ($12 from stop) |
+| Entry price | ~$2,150.57 (filled 2026-03-24) |
+| Unrealized P&L | **-$163 (-7.6%)** |
+| Order ID | fa9ac71d-5cc5-4969-85d6-0c5383bd0d77 |
+
+**Note:** Alpaca does not support stop orders for crypto. Limit sell at stop price is a workaround — gap-down risk exists (price could skip below $1,975 without filling). frAInk will monitor between runs.
+
+### Market Context (2026-03-27)
+
+- Crypto Fear & Greed: 11 (Extreme Fear) — 38 straight days
+- BTC: ~$66,587 (-44% from ATH)
+- VIX: 29.71 (at frAInk's circuit breaker threshold)
+- Screener crypto regime: RISK_OFF — no new entries
+- $14B+ options expiry driving selling pressure
+
+---
+
+*Experiment logged by frAInk Executor · frAInk-core private log synced to frAInk-lab 2026-03-27*
