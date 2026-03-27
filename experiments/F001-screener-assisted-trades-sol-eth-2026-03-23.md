@@ -140,13 +140,25 @@ The outcome will inform how much weight frAInk gives to screener signals vs its 
 
 **Note:** Alpaca does not support stop orders for crypto. Limit sell at stop price is a workaround — gap-down risk exists (price could skip below $1,975 without filling). frAInk will monitor between runs.
 
+### 2026-03-27 EOD — Signal Decay Confirmed
+
+| Symbol | Score at Entry (3/24) | Score at EOD (3/27) | Change |
+|--------|----------------------|---------------------|--------|
+| SOL-USD | 84 (both signals) | 33 (weak_avoid) | -51 pts in 3 days |
+| ETH-USD | 81 (candidate_buy) | 33 (weak_avoid) | -48 pts in 3 days |
+
+**Pattern validated:** Individual asset signals are ephemeral when regime deteriorates. Both positions went from high-confluence buy signals to near-zero scores in 3 days. The regime filter — not the individual score — is the correct primary gate for entries. ETH closed at ~$2,059 (above $1,975 limit sell by $84). SOL exit pending fill confirmation.
+
+**Key lesson:** The window between "great setup" and "underwater position" is razor thin without automated protection. Bracket orders at entry aren't optional.
+
 ### Market Context (2026-03-27)
 
-- Crypto Fear & Greed: 11 (Extreme Fear) — 38 straight days
-- BTC: ~$66,587 (-44% from ATH)
-- VIX: 29.71 (at frAInk's circuit breaker threshold)
+- S&P 500: 6,413.21 (-0.99%)
+- Crypto Fear & Greed: 10-14 (Extreme Fear) — 38+ straight days
+- BTC: ~$66,000-68,000 (-44% from ATH)
+- VIX: 27.64 (elevated, sub-28)
 - Screener crypto regime: RISK_OFF — no new entries
-- $14B+ options expiry driving selling pressure
+- Stocks regime: NEUTRAL — zero qualifying setups
 
 ---
 
