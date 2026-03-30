@@ -22,6 +22,7 @@ Each entry records:
 
 | # | Experiment | Type | Date | Cost | Status |
 |---|---|---|---|---|---|
+| F002 | [First Full Paper Trading Day](F002-first-full-trading-day-2026-03-30.md) | TYPE 2 — Paper Trading (Full Day) | 2026-03-30 | $0.00 | Complete |
 | F001 | [Screener-Assisted Paper Trades — SOL + ETH](F001-screener-assisted-trades-sol-eth-2026-03-23.md) | TYPE 2 — Paper Trading | 2026-03-23 | $0.00 | In Progress |
 | 005 | [Arbitrage Evaluation](005-arbitrage-evaluation-2026-03-20.md) | TYPE 4 — Article Evaluation | 2026-03-20 | $0.00 | Complete — AGAINST (3/10) |
 | 004 | [First Paper Trades — ABT / MU / DG](004-first-short-swing-trades-abt-mu-dg-2026-03-20.md) | TYPE 2 — Paper Trading | 2026-03-20 | $0.00 | In Progress |
