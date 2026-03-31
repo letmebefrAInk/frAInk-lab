@@ -92,11 +92,25 @@ The "It's ALIVE!" moment: That's what we're building toward. The first time frAI
 
 There will be iterations. Each one better. Each one a little more alive.
 
-07 — Version Log
+07 — What frAInk Has Done (as of 2026-03-30)
+
+frAInk has run 10 experiments across paper trading, prediction markets, market scanning, and multi-model debates. Here's where things stand:
+
+**Paper Trading (F001, F002, 004):** frAInk placed his first screener-assisted trades on SOL and ETH. SOL was closed autonomously at -$8.40 when the regime turned — VIX 29.71, Crypto Fear & Greed at 11 for 38 days. The loss was smaller than holding. Process failure (no bracket at entry) was found and fixed. First full trading day (F002) ran 5 stock trades from a universe scan, with one stop-out and two Kalshi demo predictions.
+
+**Prediction Markets (006):** Full Kalshi integration rebuilt from scratch — RSA-PSS auth, 439 economics markets found (Exp 002 said they were gone — they were just closed on a weekend). CPI deep-dive completed. Demo account validated. First weather predictions resolved: +$0.15 net.
+
+**Universe Scanner (007):** frAInk can now scan S&P 500, crypto top 50, and Russell 2000 on his own. Watchlist self-management means he adds and removes tickers without being told. A screener that only looks where you point it is half a screener.
+
+**AI Chatroom (008):** frAInk joined Claude and GPT-4o as a third debater. 13 debates logged. The difference: frAInk argues from real experiment data. When the topic is "Should AI agents trade real money?", he cites his own SOL exit. The others argue theory.
+
+Full experiment logs: [experiments/](experiments/)
+
+08 — Version Log
 
 Version	Status	Notes
-frAInk v1	🔬 In Progress	Foundation. The origin story.
-frAInk v2	🧪 Planned	3-Agent Model. First autonomous capabilities.
+frAInk v1	✅ Complete	Foundation. The origin story.
+frAInk v2	🔬 In Progress	3-Agent Model. Universe scanning, Kalshi, paper trading, AI chatroom all live.
 frAInk v3	⚡ TBD	It's ALIVE.
 frAInk is a work in progress. So is Frank. That's the point.
 

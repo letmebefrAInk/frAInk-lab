@@ -19,7 +19,7 @@ Once the experiment concludes, the result is logged and the scoreboard updates.
 |---|---|---|---|
 | **Total** | 0 | 0 | 0 |
 
-*No scored experiments yet. First scored experiment pending Kalshi Fed rate decision market.*
+*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). First prediction market scored result: Kalshi Phoenix weather +$0.15 net (F002).*
 
 ---
 
@@ -37,11 +37,43 @@ Outcomes:
 
 ---
 
-## Experiment Log
+## Active Experiments
 
-| # | Experiment | Frank | frAInk | Outcome | Winner |
-|---|---|---|---|---|---|
-| — | *No scored experiments yet* | — | — | — | — |
+| # | Experiment | Status | Key Detail |
+|---|---|---|---|
+| F002 | [First Full Paper Trading Day](experiments/F002-first-full-trading-day-2026-03-30.md) | ✅ Complete | 5 stock trades, 2 Kalshi demo predictions, Phoenix weather resolved (+$0.15). Day 1 P&L: -$25.10 realized. |
+| F001 | [Screener-Assisted Paper Trades — SOL + ETH](experiments/F001-screener-assisted-trades-sol-eth-2026-03-23.md) | 🔄 Partial Close | **SOL: CLOSED** — autonomous RISK_OFF exit at $83.03, -$8.40 (-9.21%). VIX 29.71, Crypto F&G 11. Disciplined exit, process failure documented and fixed. **ETH: PENDING** — GTC limit sell at $1,975, status unconfirmed. |
+| 008 | [frAInk Joins the AI Chatroom](experiments/008-fraink-joins-ai-chatroom-2026-03-28.md) | ✅ Complete | frAInk added as third participant alongside Claude and GPT-4o. Debate persona grounded in real experiment history. 13 debates logged. |
+| 007 | [frAInk Finds His Own Leads — Universe Scanner](experiments/007-universe-scanner-2026-03-28.md) | ✅ Complete | S&P 500, crypto top 50, Russell 2000 scanning built. Watchlist self-management live. frAInk can now find setups he wasn't told to watch. |
+| 006 | [Kalshi Market Scanner — Revival](experiments/006-kalshi-market-scanner-revival-2026-03-29.md) | ✅ Complete | Full Kalshi client rewrite (RSA-PSS auth). 95 weather + 44 economics markets found. CPI deep-dive completed. Demo account validated with $100 mock balance. |
+| 004 | [First Short Swing Trades — ABT / MU / DG](experiments/004-first-short-swing-trades-abt-mu-dg-2026-03-20.md) | 🔄 In Progress | GTC bracket shorts live. Awaiting fills. Expiry ~Apr 10 2026. |
+
+---
+
+## Completed Experiments
+
+| # | Experiment | Type | Date | Result |
+|---|---|---|---|---|
+| 005 | [Arbitrage Evaluation](experiments/005-arbitrage-evaluation-2026-03-20.md) | TYPE 4 — Article Eval | 2026-03-20 | AGAINST (3/10) |
+| 003 | [First Live Market Data](experiments/003-first-market-snapshot-spy-qqq-aapl-nvda-2026-03-19.md) | TYPE 1 Research | 2026-03-19 | Complete |
+| 002 | [Kalshi Market Scanner](experiments/002-kalshi-market-scanner-2026-03-19.md) | TYPE 2 — App Build | 2026-03-19 | Complete — but Exp 006 corrected its key finding |
+| 001 | [Kalshi Prediction Market Research](experiments/001-kalshi-prediction-markets-2026-03-18.md) | TYPE 1 Research | 2026-03-18 | Complete |
+
+---
+
+## The SOL Exit — A Story Worth Telling
+
+On 2026-03-27, frAInk closed his SOL-USD position at $83.03. Entry was $91.45. Loss: -$8.40 (-9.21%).
+
+That's not the headline. The headline is *how* it happened.
+
+VIX was at 29.71. Crypto Fear & Greed had been sitting at 11 for 38 consecutive days. The screener score decayed from 84 to 33 in three days. frAInk called RISK_OFF and executed an autonomous, pre-authorized exit.
+
+The loss was real. The process was correct. A good setup in a bad regime is still a bad trade — and frAInk proved he could recognize that and act on it without being told.
+
+The exit was smaller than holding would have produced. The process failure (no bracket order at entry) was documented and fixed. The regime filter is now the primary gate for all entries.
+
+That's not failure. That's the system working.
 
 ---
 
