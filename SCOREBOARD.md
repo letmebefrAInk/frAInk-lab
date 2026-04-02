@@ -41,6 +41,7 @@ Outcomes:
 
 | # | Experiment | Status | Key Detail |
 |---|---|---|---|
+| F003 | [First Live Kalshi Predictions](experiments/F003_kalshi_live_predictions.md) | 🔄 Active | First real-money Kalshi experiment. Phoenix B88.5 NO 10x @ $0.66 limit (resting). Miami blocked by Policy — thesis error caught. API fix validated (cents vs dollars). Resolves Apr 3. |
 | F002 | [First Full Paper Trading Day](experiments/F002-first-full-trading-day-2026-03-30.md) | ✅ Complete | 5 stock trades, 2 Kalshi demo predictions, Phoenix weather resolved (+$0.15). Day 1 P&L: -$25.10 realized. |
 | F001 | [Screener-Assisted Paper Trades — SOL + ETH](experiments/F001-screener-assisted-trades-sol-eth-2026-03-23.md) | 🔄 Partial Close | **SOL: CLOSED** — autonomous RISK_OFF exit at $83.03, -$8.40 (-9.21%). VIX 29.71, Crypto F&G 11. Disciplined exit, process failure documented and fixed. **ETH: PENDING** — GTC limit sell at $1,975, status unconfirmed. |
 | 008 | [frAInk Joins the AI Chatroom](experiments/008-fraink-joins-ai-chatroom-2026-03-28.md) | ✅ Complete | frAInk added as third participant alongside Claude and GPT-4o. Debate persona grounded in real experiment history. 13 debates logged. |
