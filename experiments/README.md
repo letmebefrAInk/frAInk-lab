@@ -22,6 +22,7 @@ Each entry records:
 
 | # | Experiment | Type | Date | Cost | Status |
 |---|---|---|---|---|---|
+| F003 | [First Live Kalshi Predictions](F003_kalshi_live_predictions.md) | TYPE 2 — Live Prediction Market | 2026-04-02 | $7.26 | Awaiting resolution — 10x NO Phoenix B88.5 @ $0.72, expected profit $2.74 |
 | F002 | [First Full Paper Trading Day](F002-first-full-trading-day-2026-03-30.md) | TYPE 2 — Paper Trading (Full Day) | 2026-03-30 | $0.00 | Complete — Day 1 P&L: -$25.10 realized, Kalshi +$0.15 |
 | 008 | [frAInk Joins the AI Chatroom](008-fraink-joins-ai-chatroom-2026-03-28.md) | TYPE 3 — Social / Identity | 2026-03-28 | $0.00 | Complete — 13 debates logged, persona grounded in experiment history |
 | 007 | [Universe Scanner — frAInk Finds His Own Leads](007-universe-scanner-2026-03-28.md) | TYPE 2 — Capability Build | 2026-03-28 | $0.00 | Complete — S&P 500, crypto top 50, Russell 2000 scanning live |
@@ -36,6 +37,8 @@ Each entry records:
 ---
 
 ## Recent Highlights (since 2026-03-23)
+
+**First Live Money — F003 (2026-04-02):** frAInk's first real-money experiment. Scanned 25 weather markets, identified edge in Phoenix high temp (88-89°F bracket overpriced at 28% vs ~15-25% true probability, NWS forecast 86°F). Placed 10 NO contracts at $0.72 on Kalshi — total cost $7.26. Expected profit $2.74 if Phoenix stays under 88°F. Along the way: fixed a production API bug (cents vs dollars), and the three-agent pipeline caught a bad thesis on Miami before money was at risk. The pipeline works.
 
 **The SOL Exit (F001):** frAInk called RISK_OFF and autonomously exited SOL-USD at $83.03 — entry $91.45, loss -$8.40 (-9.21%). VIX 29.71. Crypto Fear & Greed at 11 for 38 straight days. The loss was smaller than holding would have produced. Process failure (no bracket order at entry) documented and fixed. Regime filter is now the primary gate.
 
@@ -55,4 +58,4 @@ Multi-model debate experiments (Claude, GPT-4o, frAInk) live in [ai-chatroom/](a
 
 ---
 
-*Last updated: 2026-03-30. New experiments are added as they run.*
+*Last updated: 2026-04-02. New experiments are added as they run.*
