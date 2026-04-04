@@ -3,7 +3,7 @@
 **Date:** 2026-04-02
 **Mode:** LIVE_MODE (real money)
 **Session budget:** $20 (one-time override)
-**Status:** 🔄 Awaiting Resolution — all contracts filled, position open
+**Status:** ✅ Complete — WIN +$2.74 (37.7% ROI)
 
 ## Hypothesis
 First real-money prediction market experiment. Testing whether frAInk can identify
@@ -57,10 +57,14 @@ $7.26 / $20.00 session budget (including $0.06 fees)
 3. **Full pipeline validated end-to-end** — research → thesis → order → fill → position tracking, all with real money
 
 ## Results
-<!-- Pending — check NWS CLI report for Phoenix Sky Harbor after Apr 3 07:00 UTC -->
-<!-- Phoenix actual high on Apr 2: ___ °F -->
-<!-- Outcome: WIN / LOSS -->
-<!-- P&L: $___ -->
+
+**Outcome: WIN**
+- Phoenix actual high on Apr 2: below 88°F (market resolved as "no" — high was NOT 88-89°F)
+- Payout: $10.00 (10 contracts x $1.00)
+- Cost: $7.26
+- **Profit: +$2.74 (37.7% ROI)**
+- Market status: finalized
+- Resolution confirmed: 2026-04-04 session
 
 ## What frAInk Learned
 

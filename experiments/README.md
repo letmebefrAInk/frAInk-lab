@@ -22,7 +22,8 @@ Each entry records:
 
 | # | Experiment | Type | Date | Cost | Status |
 |---|---|---|---|---|---|
-| F003 | [First Live Kalshi Predictions](F003_kalshi_live_predictions.md) | TYPE 2 — Live Prediction Market | 2026-04-02 | $7.26 | Awaiting resolution — 10x NO Phoenix B88.5 @ $0.72, expected profit $2.74 |
+| F004 | [Kalshi Higher-Return Test](F004_kalshi_higher_return_test.md) | TYPE 2 — Live Prediction Market | 2026-04-04 | $28.19 | Awaiting resolution — 284x YES Chicago ≤54°F @ ~$0.10, payout $284 if YES |
+| F003 | [First Live Kalshi Predictions](F003_kalshi_live_predictions.md) | TYPE 2 — Live Prediction Market | 2026-04-02 | $7.26 | **Complete — WIN +$2.74 (37.7% ROI)** Phoenix B88.5 NO resolved in favor |
 | F002 | [First Full Paper Trading Day](F002-first-full-trading-day-2026-03-30.md) | TYPE 2 — Paper Trading (Full Day) | 2026-03-30 | $0.00 | Complete — Day 1 P&L: -$25.10 realized, Kalshi +$0.15 |
 | 008 | [frAInk Joins the AI Chatroom](008-fraink-joins-ai-chatroom-2026-03-28.md) | TYPE 3 — Social / Identity | 2026-03-28 | $0.00 | Complete — 13 debates logged, persona grounded in experiment history |
 | 007 | [Universe Scanner — frAInk Finds His Own Leads](007-universe-scanner-2026-03-28.md) | TYPE 2 — Capability Build | 2026-03-28 | $0.00 | Complete — S&P 500, crypto top 50, Russell 2000 scanning live |
@@ -38,7 +39,9 @@ Each entry records:
 
 ## Recent Highlights (since 2026-03-23)
 
-**First Live Money — F003 (2026-04-02):** frAInk's first real-money experiment. Scanned 25 weather markets, identified edge in Phoenix high temp (88-89°F bracket overpriced at 28% vs ~15-25% true probability, NWS forecast 86°F). Placed 10 NO contracts at $0.72 on Kalshi — total cost $7.26. Expected profit $2.74 if Phoenix stays under 88°F. Along the way: fixed a production API bug (cents vs dollars), and the three-agent pipeline caught a bad thesis on Miami before money was at risk. The pipeline works.
+**Asymmetric Weather Play — F004 (2026-04-04):** frAInk's first deliberate hunt for mispriced tails. Scanned 119 markets across weather, economics, financials, crypto. Found Chicago T55 (will the high be 54 or below?) priced at 6-7% when NWS forecast 55 under mist/overcast. Real probability estimated 25-35%. Placed 284 YES contracts at ~$0.10 — cost $28.19, potential payout $284 (907% ROI). The higher-return lens works: combine same-day NWS forecasts with real-time weather observations to find probability gaps the market hasn't closed.
+
+**First Live Money — F003 (2026-04-02):** **WIN — +$2.74 (37.7% ROI).** Phoenix B88.5 NO resolved in favor. frAInk's first real-money profit. Scanned 25 weather markets, identified edge in Phoenix high temp bracket. The three-agent pipeline caught a bad Miami thesis before money was at risk.
 
 **The SOL Exit (F001):** frAInk called RISK_OFF and autonomously exited SOL-USD at $83.03 — entry $91.45, loss -$8.40 (-9.21%). VIX 29.71. Crypto Fear & Greed at 11 for 38 straight days. The loss was smaller than holding would have produced. Process failure (no bracket order at entry) documented and fixed. Regime filter is now the primary gate.
 
