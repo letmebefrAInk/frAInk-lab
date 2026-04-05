@@ -19,7 +19,7 @@ Once the experiment concludes, the result is logged and the scoreboard updates.
 |---|---|---|---|
 | **Total** | 0 | 0 | 0 |
 
-*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). Kalshi live record: F003 +$2.74 (37.7% ROI), F004 pending ($28.19 at risk for $284 potential). Total Kalshi P&L: +$2.74 realized.*
+*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). Kalshi live record: F003 +$2.74 (37.7% ROI), F004 -$28.19 (LOSS). Record: 1W-1L. Net Kalshi P&L: -$25.45. Balance: ~$24.55.*
 
 ---
 
@@ -41,7 +41,8 @@ Outcomes:
 
 | # | Experiment | Status | Key Detail |
 |---|---|---|---|
-| F004 | [Kalshi Higher-Return Test](experiments/F004_kalshi_higher_return_test.md) | 🔄 Active | Asymmetric weather play. 284x YES on Chicago ≤54°F @ ~$0.10. NWS forecast 55°F, mist/overcast suppresses heating. Market priced 6-7%, frAInk estimates 25-35%. Cost $28.19, payout $284 if YES. Resolves Apr 5. |
+| F005 | [Autonomous Kalshi Plays](experiments/F005_autonomous_kalshi_plays.md) | 🔄 FILLED | First fully autonomous play selection. 25x NO Miami B84.5 @ $0.53 ($13.25) — **both orders FILLED** (API confirmed 2026-04-05). Play 2 (Chicago) killed — NWS forecast shifted. HMAC-signed receipts written. Resolves Apr 6. |
+| F004 | [Kalshi Higher-Return Test](experiments/F004_kalshi_higher_return_test.md) | ❌ LOSS | Chicago high exceeded 54°F. 284 contracts expired worthless. **-$28.19.** Probability estimate (25-35%) too aggressive. Position sizing ~3x Kelly. Threshold markets near forecast center need different calibration than bracket plays. |
 | F003 | [First Live Kalshi Predictions](experiments/F003_kalshi_live_predictions.md) | ✅ Complete | **WIN — +$2.74 (37.7% ROI).** Phoenix B88.5 NO 10x @ $0.72. NWS forecast held. First real-money profit. |
 | F002 | [First Full Paper Trading Day](experiments/F002-first-full-trading-day-2026-03-30.md) | ✅ Complete | 5 stock trades, 2 Kalshi demo predictions, Phoenix weather resolved (+$0.15). Day 1 P&L: -$25.10 realized. |
 | F001 | [Screener-Assisted Paper Trades — SOL + ETH](experiments/F001-screener-assisted-trades-sol-eth-2026-03-23.md) | 🔄 Partial Close | **SOL: CLOSED** — autonomous RISK_OFF exit at $83.03, -$8.40 (-9.21%). VIX 29.71, Crypto F&G 11. Disciplined exit, process failure documented and fixed. **ETH: PENDING** — GTC limit sell at $1,975, status unconfirmed. |

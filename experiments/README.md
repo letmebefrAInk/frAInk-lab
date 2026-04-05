@@ -22,7 +22,8 @@ Each entry records:
 
 | # | Experiment | Type | Date | Cost | Status |
 |---|---|---|---|---|---|
-| F004 | [Kalshi Higher-Return Test](F004_kalshi_higher_return_test.md) | TYPE 2 — Live Prediction Market | 2026-04-04 | $28.19 | Awaiting resolution — 284x YES Chicago ≤54°F @ ~$0.10, payout $284 if YES |
+| F005 | [Autonomous Kalshi Plays](F005_autonomous_kalshi_plays.md) | TYPE 2 — Live Prediction Market | 2026-04-05 | $13.25 | Active — 25x NO Miami B84.5 @ $0.53 **FILLED** (API confirmed). Play 2 killed (NWS shift). Resolves Apr 6. |
+| F004 | [Kalshi Higher-Return Test](F004_kalshi_higher_return_test.md) | TYPE 2 — Live Prediction Market | 2026-04-04 | $28.19 | ❌ LOSS — Chicago exceeded 54°F. -$28.19. Record: 1W-1L, net -$25.45. |
 | F003 | [First Live Kalshi Predictions](F003_kalshi_live_predictions.md) | TYPE 2 — Live Prediction Market | 2026-04-02 | $7.26 | **Complete — WIN +$2.74 (37.7% ROI)** Phoenix B88.5 NO resolved in favor |
 | F002 | [First Full Paper Trading Day](F002-first-full-trading-day-2026-03-30.md) | TYPE 2 — Paper Trading (Full Day) | 2026-03-30 | $0.00 | Complete — Day 1 P&L: -$25.10 realized, Kalshi +$0.15 |
 | 008 | [frAInk Joins the AI Chatroom](008-fraink-joins-ai-chatroom-2026-03-28.md) | TYPE 3 — Social / Identity | 2026-03-28 | $0.00 | Complete — 13 debates logged, persona grounded in experiment history |
@@ -39,7 +40,9 @@ Each entry records:
 
 ## Recent Highlights (since 2026-03-23)
 
-**Asymmetric Weather Play — F004 (2026-04-04):** frAInk's first deliberate hunt for mispriced tails. Scanned 119 markets across weather, economics, financials, crypto. Found Chicago T55 (will the high be 54 or below?) priced at 6-7% when NWS forecast 55 under mist/overcast. Real probability estimated 25-35%. Placed 284 YES contracts at ~$0.10 — cost $28.19, potential payout $284 (907% ROI). The higher-return lens works: combine same-day NWS forecasts with real-time weather observations to find probability gaps the market hasn't closed.
+**First Autonomous Play Selection — F005 (2026-04-05):** frAInk got $24 and "find your own plays." Scanned all available markets, proposed a two-play portfolio (Miami + Chicago). Policy caught over-budget sizing — frAInk doesn't self-limit. On re-research, caught a thesis-invalidating forecast shift on Chicago (53 to 49 deg F) and killed Play 2. Evaluated and rejected 5 alternatives. Deployed $13.25 on Miami B84.5 NO (NWS 82 deg F vs 84-85 bracket). The pipeline's multi-layer safety worked perfectly.
+
+**F004 LOSS (2026-04-05):** Chicago exceeded 54 deg F. 284 contracts expired worthless. -$28.19. The "threshold near forecast center" pattern was too aggressive — probability estimate and position sizing both too high (~3x Kelly). Kalshi record: 1W-1L, net -$25.45.
 
 **First Live Money — F003 (2026-04-02):** **WIN — +$2.74 (37.7% ROI).** Phoenix B88.5 NO resolved in favor. frAInk's first real-money profit. Scanned 25 weather markets, identified edge in Phoenix high temp bracket. The three-agent pipeline caught a bad Miami thesis before money was at risk.
 
@@ -61,4 +64,4 @@ Multi-model debate experiments (Claude, GPT-4o, frAInk) live in [ai-chatroom/](a
 
 ---
 
-*Last updated: 2026-04-02. New experiments are added as they run.*
+*Last updated: 2026-04-05. New experiments are added as they run.*

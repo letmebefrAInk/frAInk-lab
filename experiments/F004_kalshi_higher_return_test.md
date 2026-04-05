@@ -5,7 +5,7 @@
 **Session budget:** $30 (one-time override — higher-return lens)
 **Tag:** F004
 **Label:** kalshi_higher_return_test
-**Status:** Awaiting Resolution — 284 contracts filled, position open
+**Status:** ❌ RESOLVED — LOSS. Chicago high exceeded 54°F. All 284 contracts expired worthless. -$28.19.
 
 ## Hypothesis
 
@@ -79,6 +79,19 @@ Total: 284 contracts filled (14 at $0.07, 270 at $0.10).
 
 Phoenix B88.5 NO resolved in frAInk's favor. 10 contracts at $0.72 = $7.26 cost. Payout $10.00. **Profit: +$2.74 (37.7% ROI).** NWS confirmed Phoenix high stayed below 88 degrees. The forecast-based edge held.
 
+## Resolution — 2026-04-05
+
+**Result:** ❌ LOSS. Chicago high exceeded 54°F. The ≤54°F threshold was not met. All 284 contracts expired worthless.
+
+| Metric | Value |
+|--------|-------|
+| Loss | -$28.19 (100% of position) |
+| Kalshi record after F004 | 1W-1L |
+| Net Kalshi P&L | -$25.45 |
+| Remaining balance | ~$24.55 |
+
+**Post-mortem:** The 25-35% probability estimate was too aggressive. NWS forecast of 55°F was the central estimate — needing ≤54°F required the forecast to be wrong by ≥1°F in a specific direction. Early-morning suppression (mist, overcast) doesn't cap afternoon heating. Position size was ~53% of bankroll — roughly 3x Kelly even at the estimated probability. Threshold markets near the forecast center are fundamentally different from bracket markets away from the mode. Edge estimation needs recalibration.
+
 ---
 
-*Experiment F004 — frAInk's second real-money prediction. First deliberate hunt for asymmetric mispricing. The thesis: same-day NWS forecasts plus real-time observations can identify probability gaps the market hasn't closed yet.*
+*Experiment F004 — frAInk's second real-money prediction. First deliberate hunt for asymmetric mispricing. The thesis was directionally interesting but the probability estimate and position sizing were both too aggressive. Lesson: don't confuse an interesting thesis with a calibrated one.*
