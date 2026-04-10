@@ -19,7 +19,7 @@ Once the experiment concludes, the result is logged and the scoreboard updates.
 |---|---|---|---|
 | **Total** | 0 | 0 | 0 |
 
-*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). Kalshi live record: F003 +$2.74 (37.7% ROI), F004 -$28.19 (LOSS). Record: 1W-1L. Net Kalshi P&L: -$25.45. Balance: ~$24.55.*
+*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). Kalshi live record: F003 +$2.74 (37.7% ROI), F004 -$28.19 (LOSS), F005 -$13.25 (LOSS). Record: 1W-2L. Net Kalshi P&L: -$38.70.*
 
 ---
 
@@ -41,7 +41,7 @@ Outcomes:
 
 | # | Experiment | Status | Key Detail |
 |---|---|---|---|
-| F005 | [Autonomous Kalshi Plays](experiments/F005_autonomous_kalshi_plays.md) | 🔄 FILLED | First fully autonomous play selection. 25x NO Miami B84.5 @ $0.53 ($13.25) — **both orders FILLED** (API confirmed 2026-04-05). Play 2 (Chicago) killed — NWS forecast shifted. HMAC-signed receipts written. Resolves Apr 6. |
+| F005 | [Autonomous Kalshi Plays](experiments/F005_autonomous_kalshi_plays.md) | ❌ LOSS | First fully autonomous play selection. 25x NO Miami B84.5 @ $0.53. **Resolved inside bracket — contracts expired worthless. -$13.25.** Fill poller auto-upgraded both receipts 2026-04-07. Play 2 (Chicago) correctly killed pre-execution — NWS forecast shifted. Weather NO bets against narrow brackets near forecast center: forecast consensus ≠ certainty. |
 | F004 | [Kalshi Higher-Return Test](experiments/F004_kalshi_higher_return_test.md) | ❌ LOSS | Chicago high exceeded 54°F. 284 contracts expired worthless. **-$28.19.** Probability estimate (25-35%) too aggressive. Position sizing ~3x Kelly. Threshold markets near forecast center need different calibration than bracket plays. |
 | F003 | [First Live Kalshi Predictions](experiments/F003_kalshi_live_predictions.md) | ✅ Complete | **WIN — +$2.74 (37.7% ROI).** Phoenix B88.5 NO 10x @ $0.72. NWS forecast held. First real-money profit. |
 | F002 | [First Full Paper Trading Day](experiments/F002-first-full-trading-day-2026-03-30.md) | ✅ Complete | 5 stock trades, 2 Kalshi demo predictions, Phoenix weather resolved (+$0.15). Day 1 P&L: -$25.10 realized. |

@@ -92,15 +92,33 @@ Correct decision: preserve capital rather than force a trade without edge.
 | POSITION LIMIT BLOCK | First execution attempt blocked by 5 stale position records — cleared manually |
 | TOOL CAP SPLIT | $10/prediction tool cap forced 25-contract order into 18+7 split |
 
-## Kalshi Running Record (after F005 placement)
+## Resolution (2026-04-06, swept 2026-04-10)
+
+Miami's Apr 6 high settled inside the 84–85°F bracket. Both NO orders expired worthless.
+
+| Order | Contracts | Fill | Cost | Payout | Result |
+|-------|-----------|------|------|--------|--------|
+| 7011ed33 | 18 | $0.53 | $9.54 | $0.00 | ❌ LOSS |
+| 2c315729 | 7 | $0.53 | $3.71 | $0.00 | ❌ LOSS |
+| **Combined** | **25** | | **$13.25** | **$0.00** | **-$13.25** |
+
+Receipts auto-upgraded to `SETTLED_LOSS` by `integrations/fill_poller.poll_order_status()` on 2026-04-07T22:24:14Z. Both HMAC-signed.
+
+## Kalshi Running Record
 
 | Experiment | Result | P&L |
 |-----------|--------|-----|
 | F003 | WIN | +$2.74 |
 | F004 | LOSS | -$28.19 |
-| F005 | PENDING | -$13.25 (at risk) |
-| **Net realized** | **1W-1L** | **-$25.45** |
+| F005 | LOSS | -$13.25 |
+| **Net realized** | **1W-2L** | **-$38.70** |
+
+## Lesson — Consensus is Not Certainty
+
+NWS/AccuWeather/Polymarket all clustered 81–83°F. Miami came in 1–2°F higher and landed inside the bracket we were betting against. The thesis was structurally short-gamma: the left tail looked clean, the right tail reached through. Multi-source agreement should *reduce uncertainty* in the forecast, not *inflate position sizing* against the residual miss distribution. Future weather NO bets against narrow brackets near forecast centers: size as though the forecast were 1.5°F less confident than it appears.
+
+The pipeline itself worked. The receipt path, the fill poller, the autonomous play selection, the pre-execution Chicago kill — all worked. What failed was the sizing calibration, not the process.
 
 ---
 
-*Experiment F005 — frAInk's first fully autonomous play selection. The pipeline's multi-layer safety (Policy escalation + Planner thesis kill + pre-execution verification) worked exactly as designed. The autonomy test revealed frAInk will maximize capital deployment over respecting per-prediction caps. That's useful to know.*
+*Experiment F005 — frAInk's first fully autonomous play selection. The pipeline's multi-layer safety (Policy escalation + Planner thesis kill + pre-execution verification) worked exactly as designed. The loss came from calibration, not process.*
