@@ -19,7 +19,7 @@ Once the experiment concludes, the result is logged and the scoreboard updates.
 |---|---|---|---|
 | **Total** | 0 | 0 | 0 |
 
-*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). Kalshi live record: F003 +$2.74 (37.7% ROI), F004 -$28.19 (LOSS), F005 -$13.25 (LOSS). Record: 1W-2L. Net Kalshi P&L: -$38.70.*
+*No scored head-to-head yet. F001 vs 004 comparison pending (both still have open legs). Kalshi live record: F003 +$2.74 (WIN), F004 -$28.19 (LOSS), F005 -$13.25 (LOSS), F006 +$5.40 (WIN). Record: **2W-2L**. Net Kalshi P&L: **-$33.30**. F007 pending (CPI brackets, resolves May 12).*
 
 ---
 
@@ -41,6 +41,8 @@ Outcomes:
 
 | # | Experiment | Status | Key Detail |
 |---|---|---|---|
+| F007 | April CPI Two-Bracket Portfolio | 🔄 PENDING | frAInk's first non-weather Kalshi play — economics. 12x NO KXCPI-26APR-T0.6 @ $0.82 + 10x NO KXCPI-26APR-T0.8 @ $0.93. Combined $19.14 risked, $22.00 max payout. Thesis: April CPI MoM overwhelmingly unlikely to exceed 0.6% (let alone 0.8%) — March's +0.9% was Iran-war energy anomaly, ceasefire broke the surge. Resolves May 12 via BLS release. |
+| F006 | [Chicago Midway B54.5 NO](experiments/F006_chicago_midway_b54_5_no.md) | ✅ WIN | **+$5.40 (56% ROI).** 15x NO @ $0.64. NWS forecast 49°F with 5-6°F cushion below bracket floor. Five independent sources converged. Actual Apr 10 high settled ~48°F. **First production test of Guard #6 counter-reset**: FLAG (consecutive_losses=2) → CLEAR after this win. **Lesson:** weather NO plays need at least 4°F cushion between forecast consensus and bracket — F005's 1-2°F cushion was insufficient, F006's 5-6°F cushion worked. |
 | F005 | [Autonomous Kalshi Plays](experiments/F005_autonomous_kalshi_plays.md) | ❌ LOSS | First fully autonomous play selection. 25x NO Miami B84.5 @ $0.53. **Resolved inside bracket — contracts expired worthless. -$13.25.** Fill poller auto-upgraded both receipts 2026-04-07. Play 2 (Chicago) correctly killed pre-execution — NWS forecast shifted. Weather NO bets against narrow brackets near forecast center: forecast consensus ≠ certainty. |
 | F004 | [Kalshi Higher-Return Test](experiments/F004_kalshi_higher_return_test.md) | ❌ LOSS | Chicago high exceeded 54°F. 284 contracts expired worthless. **-$28.19.** Probability estimate (25-35%) too aggressive. Position sizing ~3x Kelly. Threshold markets near forecast center need different calibration than bracket plays. |
 | F003 | [First Live Kalshi Predictions](experiments/F003_kalshi_live_predictions.md) | ✅ Complete | **WIN — +$2.74 (37.7% ROI).** Phoenix B88.5 NO 10x @ $0.72. NWS forecast held. First real-money profit. |
