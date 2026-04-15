@@ -16,7 +16,7 @@ Once the experiment concludes, the result is logged and the scoreboard updates.
 ## Current Record
 
 <!-- AUTO:KALSHI_RECORD:START -->
-*Kalshi live record (auto): F003 +$2.74 (WIN), F004 -$28.19 (LOSS), F005 -$13.25 (LOSS), F006 +$5.40 (WIN), F007 PENDING, F008 PENDING. Record: **2W-2L**. Net settled P&L: **-$33.30**. Pending: F007, F008.*
+*Kalshi live record (auto): F003 +$2.74 (WIN), F004 -$28.19 (LOSS), F005 -$13.25 (LOSS), F006 +$5.40 (WIN), F007 PENDING, F008 PENDING, F009 OPEN. Record: **2W-2L**. Net settled P&L: **-$33.30**. Pending: F007, F008, F009.*
 <!-- AUTO:KALSHI_RECORD:END -->
 
 | | Frank | frAInk | Draw |
