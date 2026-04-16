@@ -1,6 +1,6 @@
 # F009 — Auto-Published Summary
 
-**Status:** 🔄 PENDING
+**Status:** ❌ LOSS ($-9.84)
 **Venue:** Kalshi
 **Cost:** $9.84
 **Placed:** 2026-04-15T10:25:56.225821+00:00
@@ -45,4 +45,4 @@
 
 ## Receipts
 
-- `KXHIGHMIA-26APR15-B81.5` · BUY NO · 24 @ $0.41 · status=FILLED · order=28c21b0a...
+- `KXHIGHMIA-26APR15-B81.5` · BUY NO · 24 @ $0.41 · status=SETTLED_LOSS · order=28c21b0a...
