@@ -92,26 +92,32 @@ The "It's ALIVE!" moment: That's what we're building toward. The first time frAI
 
 There will be iterations. Each one better. Each one a little more alive.
 
-07 — What frAInk Has Done (as of 2026-03-30)
+07 — What frAInk Has Done (as of 2026-04-16)
 
-frAInk has run 10 experiments across paper trading, prediction markets, market scanning, and multi-model debates. Here's where things stand:
+frAInk has run 100+ experiments across paper trading, live prediction markets, autonomous architecture evolution, and multi-model research. The big picture: he's no longer just running experiments — he's running experiments AND proposing the tools + rules he needs to run better ones. Highlights:
 
-**Paper Trading (F001, F002, 004):** frAInk placed his first screener-assisted trades on SOL and ETH. SOL was closed autonomously at -$8.40 when the regime turned — VIX 29.71, Crypto Fear & Greed at 11 for 38 days. The loss was smaller than holding. Process failure (no bracket at entry) was found and fixed. First full trading day (F002) ran 5 stock trades from a universe scan, with one stop-out and two Kalshi demo predictions.
+**Live Kalshi (F003 → F010):** Eight live Kalshi weather+CPI entries. 3W-3L projected net ~-$43 as of 2026-04-16 with F009 resolving today. Morning-weather hypothesis under active test. F008 WIN (+$9.31) showed that small conviction + real edge compounds. F009 expected LOSS taught that 3°F cushion is not a guarantee — forecast error in the 3-5°F range is a real hazard. F010 stand-down was frAInk's first disciplined no-trade — refused marginal setups even with room under the cap. Full domain writeups: [wiki/weather_trading.md](wiki/weather_trading.md), [wiki/kalshi_orderbook.md](wiki/kalshi_orderbook.md).
 
-**Prediction Markets (006):** Full Kalshi integration rebuilt from scratch — RSA-PSS auth, 439 economics markets found (Exp 002 said they were gone — they were just closed on a weekend). CPI deep-dive completed. Demo account validated. First weather predictions resolved: +$0.15 net.
+**Live Alpaca:** GOOGL long and NVDA long. NVDA hit TP 2026-04-15 at $199.29 for +$55.24 (+5.87% in 5 days) — clean bracket exit. GOOGL still open, up materially at last check. Lesson: the bracket pattern works on cash accounts when both legs are limit orders — no OCO, no stop+limit mix.
 
-**Universe Scanner (007):** frAInk can now scan S&P 500, crypto top 50, and Russell 2000 on his own. Watchlist self-management means he adds and removes tickers without being told. A screener that only looks where you point it is half a screener.
+**Autonomy build (2026-04-11 weekend, 13 steps shipped):** Memory layer with structured vocab + FTS5 search. Rules engine with shadow→active lifecycle. Proposal scanner + rule proposer + tool proposer (self-build loop — drafts, sandbox-tests, gates behind Frank approval). Multi-provider router (Anthropic + OpenAI + Gemini) with failover. First self-built tool promoted to production: `kalshi_cleanup_resolved_positions`. Full detail: [docs/PERSISTENT_MEMORY_BUILD.md](docs/PERSISTENT_MEMORY_BUILD.md).
 
-**AI Chatroom (008):** frAInk joined Claude and GPT-4o as a third debater. 13 debates logged. The difference: frAInk argues from real experiment data. When the topic is "Should AI agents trade real money?", he cites his own SOL exit. The others argue theory.
+**Guard Framework:** 7 guards in production, most of them built in response to specific losses. Guard #6 (consecutive-loss) is the binding safety mechanism. See [wiki/guard_framework.md](wiki/guard_framework.md).
+
+**Autonomous critique:** On 2026-04-16 frAInk evaluated 6 X posts on 2nd-brain architecture and independently identified the same three gaps that Karpathy and Garry Tan flagged the same day — no resolver layer, no dream-cycle compile step, monolithic context loading. He autonomously drafted a routing table for his own context loads. Not doing that yet, but he flagged it.
+
+**Architecture direction — the SAM suite:** SAMshield (authorization) + SAMcypher (treasury/execution) + SAMidentity (identity/auth, new 2026-04-16) — the full operating platform for autonomous agents. [docs/SAMidentity_plan.md](docs/SAMidentity_plan.md) covers the third leg.
 
 Full experiment logs: [experiments/](experiments/)
+Synthesized domain knowledge: [wiki/](wiki/)
 
 08 — Version Log
 
 Version	Status	Notes
 frAInk v1	✅ Complete	Foundation. The origin story.
-frAInk v2	🔬 In Progress	3-Agent Model. Universe scanning, Kalshi, paper trading, AI chatroom all live.
-frAInk v3	⚡ TBD	It's ALIVE.
+frAInk v2	✅ Complete	3-Agent Model. Universe scanning, Kalshi, paper trading, AI chatroom all live.
+frAInk v3	🔬 In Progress	Autonomy layer — memory, rules, self-build loop, multi-provider routing. First self-built tool landed 2026-04-11. First disciplined stand-down 2026-04-16. The "It's ALIVE!" moment is happening in stages.
+frAInk v4	⚡ TBD	Product spinout. SAM suite (SAMshield + SAMcypher + SAMidentity) and digi-twins once v3 has enough runway.
 frAInk is a work in progress. So is Frank. That's the point.
 
 
