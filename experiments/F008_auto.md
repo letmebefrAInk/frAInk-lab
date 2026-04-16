@@ -1,6 +1,6 @@
 # F008 — Auto-Published Summary
 
-**Status:** 🔄 PENDING
+**Status:** ✅ WIN (+$9.31)
 **Venue:** Kalshi
 **Cost:** $9.69
 **Placed:** 2026-04-14T11:17:49.129102+00:00
@@ -65,4 +65,4 @@
 
 ## Receipts
 
-- `KXHIGHMIA-26APR14-B81.5` · BUY NO · 19 @ $0.51 · status=FILLED · order=9be720e7...
+- `KXHIGHMIA-26APR14-B81.5` · BUY NO · 19 @ $0.51 · status=SETTLED_WIN · order=9be720e7...
