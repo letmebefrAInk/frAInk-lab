@@ -1,9 +1,9 @@
-# SAMidentity — Identity & Authentication for AI Agents
+# SAMHandler — Identity & Authentication for AI Agents
 
 *Design note. Public-facing. Shareable. Subject to change as the build progresses.*
 *Published 2026-04-16 as a companion to the frAInk project.*
 
-> **Working name: SAMidentity.** The third leg of the Secure Agent Man suite, alongside SAMshield (authorization) and SAMcypher (execution/treasury). Builds on the same pattern that shipped those two products: build it for frAInk first, commercialize once it's battle-tested.
+> **Working name: SAMHandler.** The third leg of the Secure Agent Man suite, alongside SAMshield (authorization) and SAMcypher (execution/treasury). Builds on the same pattern that shipped those two products: build it for frAInk first, commercialize once it's battle-tested.
 
 ---
 
@@ -17,7 +17,7 @@ Autonomous agents need three things to operate in the world:
 
 The agent infrastructure market has good coverage on the first two. Auth0, Clerk, and Cognito provide identity for humans. 1Password and HashiCorp Vault provide credential storage for ops teams. Browserbase and Anthropic's computer-use API give agents the ability to drive browsers. Each of these solves part of the problem.
 
-**Nobody has wrapped the whole thing for agents.** That's the gap. SAMidentity fills it.
+**Nobody has wrapped the whole thing for agents.** That's the gap. SAMHandler fills it.
 
 ---
 
@@ -31,7 +31,7 @@ Three layers, each with its own set of decisions:
 
 **Layer 3 — Full autonomy.** The agent operates any service with or without an API. It drives browsers where needed. It has limited payment capabilities under strict caps. It is indistinguishable from a human user to the systems it touches. This tier is further out.
 
-SAMidentity covers all three. Builds in order. Validates each before the next.
+SAMHandler covers all three. Builds in order. Validates each before the next.
 
 ---
 
@@ -43,13 +43,13 @@ A few things we won't compromise on:
 - **Revocation is one command and it's fast.** All active credentials die in under 60 seconds on human command. The kill switch is tested regularly, not just assumed.
 - **Credentials never sit in agent memory or logs.** They're issued on demand, short-lived, and ephemeral. An agent memory file that's exfiltrated should be useless.
 - **Every credential use produces an audit record.** The agent signed the tweet with this token at this moment. Not just "a tweet happened" — who, what, when, why, traceable.
-- **Policy decisions happen in SAMshield.** Credential issuance happens in SAMidentity. Action execution happens in SAMcypher. Each product does one thing and passes clean interfaces to the others.
+- **Policy decisions happen in SAMshield.** Credential issuance happens in SAMHandler. Action execution happens in SAMcypher. Each product does one thing and passes clean interfaces to the others.
 
 ---
 
 ## What we're building (and not building)
 
-**In scope for SAMidentity:**
+**In scope for SAMHandler:**
 - Credential vault with short-TTL issuance and audit trail
 - Policy hooks for new action classes: account creation, credential issuance, credential revocation, social posting
 - Per-service adapters for how credentials get provisioned and rotated (start with X, GitHub, Gmail)
@@ -69,21 +69,21 @@ The product shape is *the thin layer that gives agents credentials with policy-a
 
 ## How it fits with frAInk
 
-frAInk is SAMidentity's first dogfood customer. Same pattern that validated SAMcypher and SAMshield before they became products.
+frAInk is SAMHandler's first dogfood customer. Same pattern that validated SAMcypher and SAMshield before they became products.
 
 frAInk needs this for real reasons. To read thread content from X that's behind a login wall. To draft posts under a public identity. To have an email address that isn't tied to the founder's personal account. To do all of that inside a policy framework that lets the founder sleep at night.
 
-When frAInk has been running on SAMidentity for a few weeks, the patterns that emerge become the product features that ship externally. The thing that makes this work is that frAInk is a skeptical, high-stakes customer. If SAMidentity can't handle frAInk's paranoia about getting hacked, it can't handle someone else's production agent either.
+When frAInk has been running on SAMHandler for a few weeks, the patterns that emerge become the product features that ship externally. The thing that makes this work is that frAInk is a skeptical, high-stakes customer. If SAMHandler can't handle frAInk's paranoia about getting hacked, it can't handle someone else's production agent either.
 
 ---
 
 ## How it fits with other agents
 
-SAMidentity is not a frAInk feature. It's a standalone product.
+SAMHandler is not a frAInk feature. It's a standalone product.
 
-Any agent — written in any language, by any team — will be able to install a thin SDK, register an agent ID, and start requesting credentials by purpose. The agent says "I need an X token for posting" and SAMidentity either issues a short-lived token under policy review or rejects the request with a reason. The agent never holds long-term credentials.
+Any agent — written in any language, by any team — will be able to install a thin SDK, register an agent ID, and start requesting credentials by purpose. The agent says "I need an X token for posting" and SAMHandler either issues a short-lived token under policy review or rejects the request with a reason. The agent never holds long-term credentials.
 
-Commercially, that means an AI startup building on GPT or Gemini or any other model can plug in SAMidentity without rebuilding their policy stack. They bring their own policy engine if they want, or they use SAMshield alongside. The suite works as a bundle, but each piece stands alone.
+Commercially, that means an AI startup building on GPT or Gemini or any other model can plug in SAMHandler without rebuilding their policy stack. They bring their own policy engine if they want, or they use SAMshield alongside. The suite works as a bundle, but each piece stands alone.
 
 ---
 
@@ -112,7 +112,7 @@ Design phase. Architecture captured in a private working document. First build t
 
 Intentionally unresolved questions at the time of writing:
 
-- What exact name ships? "SAMidentity" is the working placeholder. Alternatives under consideration: SAMid, SAMkey, SAMforge, SAMstamp, SAMvault. Naming is the last 5% of the problem but it matters.
+- What exact name ships? "SAMHandler" is the working placeholder. Alternatives under consideration: SAMid, SAMkey, SAMforge, SAMstamp, SAMvault. Naming is the last 5% of the problem but it matters.
 - Which credential vault: build custom, use HashiCorp Vault open-source, or subscribe to 1Password Secrets Automation. Answer likely depends on whether the product ships internal-first or public-first.
 - Commercial pricing model. Per-credential-issuance is a natural unit. But the shape of demand is unknown until there are real customers beyond frAInk.
 

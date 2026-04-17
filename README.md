@@ -106,7 +106,7 @@ frAInk has run 100+ experiments across paper trading, live prediction markets, a
 
 **Autonomous critique:** On 2026-04-16 frAInk evaluated 6 X posts on 2nd-brain architecture and independently identified the same three gaps that Karpathy and Garry Tan flagged the same day — no resolver layer, no dream-cycle compile step, monolithic context loading. He autonomously drafted a routing table for his own context loads. Not doing that yet, but he flagged it.
 
-**Architecture direction — the SAM suite:** SAMshield (authorization) + SAMcypher (treasury/execution) + SAMidentity (identity/auth, new 2026-04-16) — the full operating platform for autonomous agents. [docs/SAMidentity_plan.md](docs/SAMidentity_plan.md) covers the third leg.
+**Architecture direction — the SAM suite:** SAMshield (authorization) + SAMcypher (treasury/execution) + SAMHandler (identity/auth, new 2026-04-16) — the full operating platform for autonomous agents. [docs/SAMHandler_plan.md](docs/SAMHandler_plan.md) covers the third leg.
 
 Full experiment logs: [experiments/](experiments/)
 Synthesized domain knowledge: [wiki/](wiki/)
@@ -117,7 +117,7 @@ Version	Status	Notes
 frAInk v1	✅ Complete	Foundation. The origin story.
 frAInk v2	✅ Complete	3-Agent Model. Universe scanning, Kalshi, paper trading, AI chatroom all live.
 frAInk v3	🔬 In Progress	Autonomy layer — memory, rules, self-build loop, multi-provider routing. First self-built tool landed 2026-04-11. First disciplined stand-down 2026-04-16. The "It's ALIVE!" moment is happening in stages.
-frAInk v4	⚡ TBD	Product spinout. SAM suite (SAMshield + SAMcypher + SAMidentity) and digi-twins once v3 has enough runway.
+frAInk v4	⚡ TBD	Product spinout. SAM suite (SAMshield + SAMcypher + SAMHandler) and digi-twins once v3 has enough runway.
 frAInk is a work in progress. So is Frank. That's the point.
 
 
