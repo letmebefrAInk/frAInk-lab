@@ -119,6 +119,3 @@ frAInk v2	✅ Complete	3-Agent Model. Universe scanning, Kalshi, paper trading, 
 frAInk v3	🔬 In Progress	Autonomy layer — memory, rules, self-build loop, multi-provider routing. First self-built tool landed 2026-04-11. First disciplined stand-down 2026-04-16. The "It's ALIVE!" moment is happening in stages.
 frAInk v4	⚡ TBD	Product spinout. SAM suite (SAMshield + SAMcypher + SAMHandler) and digi-twins once v3 has enough runway.
 frAInk is a work in progress. So is Frank. That's the point.
-
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support%20the%20lab-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/letmebefraink)
