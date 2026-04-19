@@ -1,9 +1,11 @@
 # SAMHandler — Identity & Authentication for AI Agents
 
-*Design note. Public-facing. Shareable. Subject to change as the build progresses.*
-*Published 2026-04-16 as a companion to the frAInk project.*
+> **⚠️ HISTORIC — published 2026-04-16 as a social-update artifact. Frozen as a point-in-time snapshot.** Current authoritative design + state lives in the SAMHandler repo: [`SAMHandler/SAMHANDLER_DESIGN.md`](https://github.com/letmebefrAInk/SAMHandler/blob/main/SAMHANDLER_DESIGN.md) (design spec) and [`SAMHandler/BUILD_STATE.md`](https://github.com/letmebefrAInk/SAMHandler/blob/main/BUILD_STATE.md) (build status). This file is preserved for narrative continuity in lab posts; do not load for build decisions.
 
-> **Working name: SAMHandler.** The third leg of the Secure Agent Man suite, alongside SAMshield (authorization) and SAMcypher (execution/treasury). Builds on the same pattern that shipped those two products: build it for frAInk first, commercialize once it's battle-tested.
+*Design note. Public-facing. Shareable. Subject to change as the build progresses.*
+*Published 2026-04-16 as a companion to the frAInk project. Marked HISTORIC 2026-04-19.*
+
+> **Working name: SAMHandler.** (LOCKED 2026-04-17.) The third leg of the Secure Agent Man suite, alongside SAMshield (authorization) and SAMcypher (execution/treasury). Builds on the same pattern that shipped those two products: build it for frAInk first, commercialize once it's battle-tested.
 
 ---
 

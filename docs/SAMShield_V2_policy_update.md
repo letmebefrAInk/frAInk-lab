@@ -1,9 +1,11 @@
 # SAMShield V2 — Policy Layer Upgrade
 ### frAInk's safety layer gets configurable, mode-aware, and rule-based
 
+> **⚠️ HISTORIC — point-in-time social-update artifact, 2026-04-12. Test counts and status reflect that date only.** Current authoritative state lives in [`SAMShield/BUILD_STATE.md`](https://github.com/letmebefrAInk/SAMShield/blob/main/BUILD_STATE.md). Test counts have grown (118 module + 10 API as of 2026-04-19); features have advanced (action classes shipped 2026-04-19). Preserved here for lab narrative continuity; do not load for build decisions.
+
 **Date:** 2026-04-12
-**Status:** Live in frAInk pipeline
-**Tests:** 100/100 (standalone) + 275/275 (frAInk integration, zero regressions)
+**Status (as of 2026-04-12):** Live in frAInk pipeline
+**Tests (as of 2026-04-12):** 100/100 (standalone) + 275/275 (frAInk integration, zero regressions)
 
 ---
 

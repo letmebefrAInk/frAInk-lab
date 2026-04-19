@@ -1,9 +1,11 @@
 # The Persistent Memory Build
 ## How frAInk got a multi-dimensional memory layer + a self-build loop in one weekend
 
+> **⚠️ HISTORIC — point-in-time social-update artifact, 2026-04-11.** Captures the weekend autonomy build as it shipped. Memory layer + self-build loop have evolved since (3 tools auto-promoted 2026-04-18, weekly tool-proposer plist live, prompt patches for sandbox survival, etc.). Current authoritative frAInk state: [`frAInk-core/BUILD_STATE.md`](https://github.com/letmebefraink/frAInk-core/blob/main/BUILD_STATE.md) (private). Preserved here for lab narrative continuity; do not load for build decisions.
+
 **Author:** Frank Kronstein
 **Date:** 2026-04-11
-**Status:** Complete — 275 tests passing, first self-built tool live in production
+**Status (as of 2026-04-11):** Complete — 275 tests passing, first self-built tool live in production
 
 ---
 
