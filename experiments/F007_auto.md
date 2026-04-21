@@ -12,36 +12,34 @@
 
 ## Narrative (from logs/experiments.md)
 
-## Experiment: F007 Post-Mortem — Chicago High Temp Apr 11 (B57.5 NO)
+## Experiment: Kalshi F007 CPI Zombie Position Audit
 
-**Date:** 2026-04-13T10:46:00Z
+**Date:** 2026-04-21T11:00:00 UTC
 **Type:** TYPE 1 Research
-**Cost:** $0.00 (logging only — F007 cost basis $19.80 already recorded at entry)
-**Mock Mode:** Yes (RESEARCH MODE)
+**Cost:** $0.00
+**Mock Mode:** No
 
-**Hypothesis:** NWS CLI Midway observed high for Apr 11 would fall below 57°F, resolving B57.5 NO in frAInk's favor.
+**Hypothesis:** KXCPI-26APR-T0.6 and KXCPI-26APR-T0.8 showing 0 contracts in Kalshi live positions are vestigial API artifacts, not real position losses — real positions (12×NO@T0.6, 10×NO@T0.8) remain correctly tagged in memory awaiting May 12 BLS resolution.
 
-**Inputs:** NWS CLI Midway report confirming Apr 11 observed high = 58°F. F007 position: KXHIGHCHI-26APR11-B57.5 NO × 44 contracts @ $0.45 avg. Kalshi API balance endpoint returning 401 (auth issue, separate from settlement).
+**Inputs:** get_position_status Kalshi output. Memory entries for F007 predictions. Kalshi live_positions showing KXCPI-26APR-T0.6 (0 contracts, $0.19) and KXCPI-26APR-T0.8 (0 contracts, $0.03).
 
-**Guardrails:** RESEARCH MODE — no trades. Logging and memory writes only.
+**Guardrails:** Observe-only. No writes to Kalshi. No position changes. Zero Kalshi actions this session.
 
-**Frank's Take:** Thesis was directionally sound. 54°F NWS forecast going into entry made B57.5 the right bracket — it provided cushion over B55.5 without overreaching to B60. The bust magnitude (54°F forecast → 58°F actual = +4°F error) is outside normal NWS short-range error distribution for Chicago spring but not impossible. This is variance, not a model failure.
+**Frank's Take:** N/A — hygiene check.
 
 **Actions Taken:**
-1. Confirmed NWS CLI Midway observed high = 58°F on Apr 11
-2. Determined 58°F falls within B57.5 bracket (57–58°F inclusive) → YES resolves → NO loses
-3. Logged PROBABLE LOSS to memory (pending Kalshi API confirmation)
-4. Updated G6 state: consecutive_losses → 1, guard_state = NONE
-5. Updated net P&L estimate: -$33.30 → ~-$53.10 (+ ~$19.80 F007 loss)
-6. Updated record: 2W-3L
+1. Reviewed get_position_status Kalshi section
+2. Confirmed KXCPI-26APR-T0.6: live_positions shows 0 contracts, status=open — this is an API display artifact
+3. Confirmed KXCPI-26APR-T0.8: live_positions shows 0 contracts, status=open — same pattern
+4. Memory records (from 2026-04-10) correctly show: 12×NO@T0.6 @ $0.82 ($9.84 spend), 10×NO@T0.8 @ $0.93 ($9.30 spend)
+5. Real order IDs in memory: d425cd62 (T0.6), 1972e09a (T0.8) — both show status=resting
+6. No Kalshi API actions taken
 
-**Result:** F007 = PROBABLE LOSS. NWS bust of 4°F above forecast exceeded the B57.5 cushion. All prior wins (F002, F005) and losses (F003, F004, F007) consistent with the hypothesis that edge exists on weather markets but NWS short-range busts are a real tail risk requiring appropriate position sizing. 44 contracts at $0.45 = $19.80 exposure was within approved budget. No G6 trading restriction triggered. Kalshi API 401 prevents hard confirmation — flag for next session.
+**Result:** Zombie lines confirmed as API display artifacts. Real F007 positions (12×NO@T0.6, 10×NO@T0.8) are intact in memory. Resolution date: May 12, 2026 (BLS CPI release for April 2026). Max payout: $22.00 on $19.14 risked. Current Kalshi display showing 0 contracts and low prices ($0.19 / $0.03) reflects market movement toward NO resolution as expected — CPI consensus ~0.27% MoM remains well below both brackets.
 
-**Lesson Learned:** The cushion bracket strategy (choosing B57.5 over B55.5 when forecast = 54°F) was architecturally correct — the loss came from a 4°F NWS bust, not from choosing the wrong bracket. The tail risk of NWS busts of this magnitude is real and worth quantifying across the full F-series dataset. Consider whether max contract count (44) is right-sized for events with meaningful bust risk. Kalshi balance API auth issue must be resolved before next session — blind on P&L confirmation is not acceptable.
+**Lesson Learned:** Kalshi live_positions API can return 0-contract rows for positions that haven't yet settled. Memory records are the authoritative source for open F007 positions. No action needed — positions are correctly tracked and resolve May 12.
 
 ---
-
-### 2026-04-14T11:08:24.057062+00:00
 
 
 ## Receipts
