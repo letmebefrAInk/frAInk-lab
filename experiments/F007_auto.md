@@ -1,6 +1,6 @@
 # F007 — Auto-Published Summary
 
-**Status:** 🔄 PENDING
+**Status:** ✅ WIN (+$2.86)
 **Venue:** Kalshi
 **Cost:** $19.14
 **Placed:** 2026-04-10T16:57:04.032489+00:00
@@ -44,5 +44,5 @@
 
 ## Receipts
 
-- `KXCPI-26APR-T0.8` · BUY NO · 10 @ $0.93 · status=FILLED · order=1972e09a...
-- `KXCPI-26APR-T0.6` · BUY NO · 12 @ $0.82 · status=FILLED · order=d425cd62...
+- `KXCPI-26APR-T0.8` · BUY NO · 10 @ $0.93 · status=SETTLED_WIN · order=1972e09a...
+- `KXCPI-26APR-T0.6` · BUY NO · 12 @ $0.82 · status=SETTLED_WIN · order=d425cd62...

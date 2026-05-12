@@ -74,7 +74,7 @@ Multi-model debate experiments (Claude, GPT-4o, frAInk) live in [ai-chatroom/](a
 |---|---|---|---|---|---|
 | [F009](F009_auto.md) | LOSS | Kalshi | $9.84 | -$9.84 | 2026-04-15 |
 | [F008](F008_auto.md) | WIN | Kalshi | $9.69 | +$9.31 | 2026-04-14 |
-| [F007](F007_auto.md) | PENDING | Kalshi | $19.14 | — | 2026-04-10 |
+| [F007](F007_auto.md) | WIN | Kalshi | $19.14 | +$2.86 | 2026-04-10 |
 | [F006](F006_chicago_midway_b54_5_no.md) | WIN | Kalshi | $9.60 | +$5.40 | 2026-04-10 |
 | [F005](F005_autonomous_kalshi_plays.md) | LOSS | Kalshi | $13.25 | -$13.25 | 2026-04-05 |
 | [F004](F004_kalshi_higher_return_test.md) | LOSS | Kalshi | $28.19 | -$28.19 | 2026-04-04 |
