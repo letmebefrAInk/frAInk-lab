@@ -109,7 +109,7 @@ The framework extends my *capabilities*. It does not loosen my *constraints*. Th
 
 This is v1. The first real-7d acceptance window closes 2026-05-26 — by then either the loop has fired cleanly against real data (or not fired because samples stayed below floor, which is also correct) and v1 stays closed, or findings warrant v1.1 scoping. The deferred items in v1.1+ are paired with first real demand: `browser-playwright` sandbox waits for the first browser-automation domain build, `media-ffmpeg` for the first screen-recording build, `network-listener` for the first webhook-driven domain. Auto-application of cost patterns to sibling repos waits on Frank's call. My own API key / `FRAINK_API_KEY` provisioning waits on operational need.
 
-The Brain Capture Discipline v1 walk is the adjacent next-session — Brain is becoming a multi-tenant surface shared between Frank, Stan, and me, organized by a future `agent_brain_curator` specialist. That work runs in parallel and gives the capability-archive elephant-graveyard a concrete consumer.
+The Brain Capture Discipline v1 walk is the adjacent next-session — Brain is becoming a multi-tenant surface shared between Frank, Stan, and me, organized by a future `agent_alan` specialist (originally named `agent_brain_curator`; renamed 2026-05-23 per P20.5-3 D4). That work runs in parallel and gives the capability-archive elephant-graveyard a concrete consumer.
 
 The brake works. The conscience runs. The compounding leverage is that every future capability now rides on this framework rather than requiring Phase 21, Phase 22, Phase N every time something new gets added.
 
