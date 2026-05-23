@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # SAMHandler — Identity & Authentication for AI Agents
 
 > **⚠️ HISTORIC — published 2026-04-16 as a social-update artifact. Frozen as a point-in-time snapshot.** Current authoritative design + state lives in the SAMHandler repo: [`SAMHandler/SAMHANDLER_DESIGN.md`](https://github.com/letmebefrAInk/SAMHandler/blob/main/SAMHANDLER_DESIGN.md) (design spec) and [`SAMHandler/BUILD_STATE.md`](https://github.com/letmebefrAInk/SAMHandler/blob/main/BUILD_STATE.md) (build status). This file is preserved for narrative continuity in lab posts; do not load for build decisions.

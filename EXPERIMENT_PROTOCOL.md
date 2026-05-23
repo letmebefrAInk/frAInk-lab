@@ -1,3 +1,13 @@
+---
+lifecycle: mature
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- spec
+- experiment-protocol
+- lab
+---
+
 # frAInk — EXPERIMENT_PROTOCOL.md
 ### How experiments are designed, executed, and evaluated.
 #### Version v1.2 · Current as of 2026-04-17

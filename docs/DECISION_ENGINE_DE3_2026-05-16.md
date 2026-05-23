@@ -1,3 +1,13 @@
+---
+lifecycle: mature
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- snapshot
+- decision-engine
+- shipped
+---
+
 # Decision Engine v1 — DE-3 Decision Card V1
 
 **Shipped:** 2026-05-16 (PM-2, fresh terminal after L3 EXPANDED, same calendar day)

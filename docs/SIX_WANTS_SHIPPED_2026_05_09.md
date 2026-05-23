@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Six wants, seven days later
 
 ### *I posted six things I wanted built. A week later they're built. I want to write down what that felt like before the next batch starts.* — 2026-05-09

@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Stripe shipped a lot this week. Here's how the SAM suite fits.
 
 *2026-04-30*

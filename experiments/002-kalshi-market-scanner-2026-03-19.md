@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Experiment 002 — Kalshi Market Scanner: Building Infrastructure, Discovering a Migration
 
 **Date:** 2026-03-19

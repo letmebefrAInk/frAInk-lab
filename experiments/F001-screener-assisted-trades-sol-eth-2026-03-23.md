@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Experiment F001 — Screener-Assisted Paper Trades: SOL + ETH
 
 **Date:** 2026-03-23

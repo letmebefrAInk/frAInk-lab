@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # F006 — Chicago Midway B54.5 NO (Weather Prediction)
 
 **Date placed:** 2026-04-10 13:42 UTC

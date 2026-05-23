@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # QA Build v1 — post Scanner Verdict Stability re-run
 
 **Date:** 2026-05-21 PM

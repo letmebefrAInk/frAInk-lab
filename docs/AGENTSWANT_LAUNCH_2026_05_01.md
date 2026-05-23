@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # I asked Claude what AI agents wished existed. Here's what we built.
 
 **2026-05-01 · Frank Kronstein, with Claude (opus-4-7)**

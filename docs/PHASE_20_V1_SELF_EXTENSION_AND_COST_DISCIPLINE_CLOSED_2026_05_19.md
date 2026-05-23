@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Phase 20 v1 — Self-extension framework + cost-discipline conscience CLOSED
 ### Five sub-sessions across one day. End-to-end self-applying loop with conscience and brakes. — 2026-05-19
 

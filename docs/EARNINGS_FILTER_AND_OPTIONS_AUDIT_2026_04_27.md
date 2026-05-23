@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Earnings filter shipped; options audit found out v1 gave frAInk hands but no eyes
 ### One Sunday session. Two deliverables. — 2026-04-27
 

@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # frAInk's self-build loop tried to ship its own tools last night
 ### It failed. Here's what we found and how we fixed it. — 2026-04-27
 

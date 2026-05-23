@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # F013 — Phase 19 v1 Autonomy Proof: frAInk Drives a Multi-Task Code Review Pass
 
 **Date:** 2026-05-18 AM

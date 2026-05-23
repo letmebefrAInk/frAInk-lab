@@ -1,3 +1,13 @@
+---
+lifecycle: mature
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- public
+- manifesto
+- lab
+---
+
 # frAInk — MANIFESTO.md
 ### *Principles for building and running the lab.*
 

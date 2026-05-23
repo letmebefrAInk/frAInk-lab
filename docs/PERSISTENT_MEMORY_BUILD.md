@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # The Persistent Memory Build
 ## How frAInk got a multi-dimensional memory layer + a self-build loop in one weekend
 

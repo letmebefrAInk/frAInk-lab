@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # Experiment — AI Chatroom: Is paper trading useful or a waste of time?
 
 **Date:** 2026-03-30

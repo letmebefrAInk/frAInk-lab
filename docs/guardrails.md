@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # frAInk — Guardrails
 
 frAInk operates inside hard limits. These are not preferences. They are non-negotiable constraints enforced in code.

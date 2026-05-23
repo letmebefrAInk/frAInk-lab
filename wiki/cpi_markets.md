@@ -1,3 +1,11 @@
+---
+lifecycle: active
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- needs_audit
+---
+
 # CPI & Macro Markets
 
 > Auto-compiled from frAInk learning.db | First compile: 2026-04-16

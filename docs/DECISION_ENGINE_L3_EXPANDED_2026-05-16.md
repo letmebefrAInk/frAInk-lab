@@ -1,3 +1,13 @@
+---
+lifecycle: mature
+category: frAInk
+captured_at: '2026-05-23T16:35:00-04:00'
+tags:
+- snapshot
+- decision-engine
+- shipped
+---
+
 # Decision Engine v1 — L3 EXPANDED
 
 **Shipped:** 2026-05-16 (PM, single fresh-terminal session)
