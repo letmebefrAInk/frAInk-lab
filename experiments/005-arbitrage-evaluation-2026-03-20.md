@@ -1,9 +1,8 @@
 ---
-lifecycle: active
+lifecycle: archived
 category: frAInk
 captured_at: '2026-05-23T16:35:00-04:00'
-tags:
-- needs_audit
+tags: []
 ---
 
 # Experiment 005 — Arbitrage Evaluation: 47,000 People Liked This Thread. frAInk Checked the Math.
