@@ -1,10 +1,3 @@
----
-lifecycle: archived
-category: frAInk
-captured_at: '2026-05-23T16:35:00-04:00'
-tags: []
----
-
 # F010 — Auto-Published Summary
 
 **Status:** ✅ WIN (+$11.37)
