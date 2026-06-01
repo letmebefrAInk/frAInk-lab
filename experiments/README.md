@@ -80,6 +80,7 @@ Multi-model debate experiments (Claude, GPT-4o, frAInk) live in [ai-chatroom/](a
 
 | ID | Status | Venue | Cost | P&L | Placed |
 |---|---|---|---|---|---|
+| [F013](F013_phase_19_autonomy_proof.md) | WIN | Alpaca | $18.91 | +$3.19 | 2026-05-26 |
 | [F011](F011_auto.md) | WIN | Alpaca | $11.94 | +$0.02 | 2026-05-12 |
 | [F012](F012_auto.md) | LOSS | Alpaca | $14.57 | -$1.48 | 2026-05-12 |
 | [F010](F010_auto.md) | WIN | Alpaca | $47.48 | +$11.37 | 2026-05-08 |
