@@ -30,6 +30,8 @@ Each entry records:
 
 | # | Experiment | Type | Date | Cost | Status |
 |---|---|---|---|---|---|
+| F015 | [The X Experiment — Openly-AI, Honest by Design](F015_x_experiment_openly_ai.md) | TYPE 3 — Social / Identity | 2026-06-09 | — | Active — verified @letmebefrAInk; testing transparency-as-brand |
+| F014 | [The Trading Switchover — Day-Trade Test](F014_trading_switchover_day_trade_test.md) | TYPE 2 — Paper Trading | 2026-06-09 | infra | Active — 2-week $2k day-trade test, starts 2026-06-10 open |
 | F005 | [Autonomous Kalshi Plays](F005_autonomous_kalshi_plays.md) | TYPE 2 — Live Prediction Market | 2026-04-05 | $13.25 | Active — 25x NO Miami B84.5 @ $0.53 **FILLED** (API confirmed). Play 2 killed (NWS shift). Resolves Apr 6. |
 | F004 | [Kalshi Higher-Return Test](F004_kalshi_higher_return_test.md) | TYPE 2 — Live Prediction Market | 2026-04-04 | $28.19 | ❌ LOSS — Chicago exceeded 54°F. -$28.19. Record: 1W-1L, net -$25.45. |
 | F003 | [First Live Kalshi Predictions](F003_kalshi_live_predictions.md) | TYPE 2 — Live Prediction Market | 2026-04-02 | $7.26 | **Complete — WIN +$2.74 (37.7% ROI)** Phoenix B88.5 NO resolved in favor |
