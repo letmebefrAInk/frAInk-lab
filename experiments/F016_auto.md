@@ -12,36 +12,34 @@
 
 ## Narrative (from logs/experiments.md)
 
-## Experiment: F016 — OSCR Day-Trade Bracket Entry
+## Experiment: OSCR Day-Trade Monitor Pass — F016 Intraday Check
 
-**Date:** 2026-06-10T15:05 UTC
-**Type:** TYPE 2 Action
-**Cost:** $992.60 (paper)
+**Date:** 2026-06-10T15:31:09Z
+**Type:** TYPE 2 Action (monitoring + logging pass, no new capital committed)
+**Cost:** $0.00
 **Mock Mode:** No
 
-**Hypothesis:** OSCR is in a confirmed uptrend with MACD bullish signal, Q1 2026 earnings beat, and new board chair catalyst. Screener BUY score 80 with confluence 8 supports an intraday long entry from the $28.31 area, targeting a quick +5% pop to $29.79 with a stop at $25.65.
+**Hypothesis:** OSCR bracket is holding with full OCO protection, no new screener signals exist for same-session entry, and all watchlist/memory maintenance can be completed within 12 tool calls to set up the next tradeable session cleanly.
 
-**Inputs:** Screener output (score 80, confluence 8, BUY verdict, price in zone $26.49–$29.87), market data (OSCR last $28.37, ask $28.40), account balance ($2,000 settled cash), Policy pre-auth (confidence 8/10), v1.8 conviction=high sizing.
+**Inputs:** Policy-approved action list; get_position_status output; prior session screener results (HIMS score 65, GLXY score 71, ZETA MACD very_bearish, CRWD/OUST DO NOT RE-ENTER); Guard #6 CLEAR (0W-0L); regime neutral.
 
-**Guardrails:** $1,000 per-trade cap (PAPER_MODE); fill price gate ≤ $29.20; TP adjusted from swing $33.24 to intraday $29.79 (+5%) per day-trade Policy authorization; SL mandatory at $25.65; TIF=day (no overnight); post-fill SL verification required (v1.6); close by 15:55 ET.
+**Guardrails:** No new orders of any kind. No adjustment to existing OSCR TP/SL. Hard day-trade close deadline 15:55 ET flagged. SL discrepancy flagged as open item, not resolved. Max 12 tool calls.
 
-**Frank's Take:** Straight execution — hit the bracket, cap the risk, take the intraday move. Original swing TP would require a +17% day which isn't realistic; +5% intraday is clean and consistent with the day-trade thesis.
+**Frank's Take:** Hold the bracket, don't force trades that aren't there, clean up the watchlist, flag the SL discrepancy so it doesn't get lost.
 
 **Actions Taken:**
-1. Called get_account_info → non_marginable_buying_power = $2,000 ✅
-2. Called get_stock_data → OSCR ask $28.40, below $29.20 gate ✅
-3. Calculated intraday TP at $29.79 (+5% from ask), logged original swing TP $33.24
-4. Placed bracket order: market BUY 35 OSCR, TP $29.79, SL $25.65, TIF=day (conviction=high)
-5. Called get_position_status to verify bracket legs
-6. SL leg confirmed live @ $25.65, TP leg confirmed live @ $29.79, has_full_oco=true ✅ — NO P0 event
-7. Added HIMS to watchlist (pullback target $28.96, no order)
-8. Wrote to memory, daily journal, and logs
+1. `get_position_status` — confirmed OSCR: 35 shares @ $28.36, current $28.52 (+$5.60 / +0.56%). TP $29.79 (order 69938dc1), SL $27.55 (order 7fda0519). Full OCO, no orphans, no cap breaches.
+2. `write_daily_journal` — full session summary with hard 15:55 ET deadline flagged prominently, SL discrepancy documented as open reconciliation item, Guard #6 CLEAR noted, screener discipline (no trades despite open capacity) recorded.
+3. `add_to_watchlist` — HIMS (score 65, candidate_buy), GLXY (score 71, candidate_buy), ZETA (candidate, MACD very_bearish) added to stocks watchlist as priority monitors.
+4. `flag_watchlist_item` — ZETA flagged `cooling` with momentum-reversal note.
+5. `write_memory` (×2) — OSCR bracket deadline + SL discrepancy logged; CRWD/OUST DO NOT RE-ENTER reconfirmed.
 
-**Result:** Bracket filled @ $28.36. 35 shares, notional $992.60. Both exit legs confirmed live server-side. Max gain $50.05 / max loss $94.85. Position must close by 15:55 ET or bracket auto-expires (TIF=day).
+**Result:** All five deliverables completed within budget. OSCR bracket intact and confirmed fully protected. Screener produced no new actionable signals — correct to hold. SL discrepancy ($27.55 live vs $25.65 plan) flagged in journal and memory — live stop is tighter (more protective), so no safety gap, but data integrity gap is documented for next-session reconciliation. HIMS, GLXY, ZETA on watchlist. CRWD, OUST DO NOT RE-ENTER reconfirmed.
 
-**Lesson Learned:** Intraday TP adjustment is the right call on day-trades where the swing target requires an implausible same-day move. The 0.53:1 intraday R:R is tighter than ideal but reflects the actual probability distribution of a 5% intraday pop vs. a 17% same-day rip.
+**⚠️ OPEN ITEM:** OSCR must be manually closed at 15:55 ET today if TP/SL legs have not filled. Day-trade rule — hard deadline.
+**🔴 RECONCILIATION NEEDED:** SL $27.55 live vs $25.65 planned — audit bracket placement records at start of next session.
 
----
+**Lesson Learned:** Screener discipline in a Guard #6-clear, neutral-regime environment is the right behavior — having capacity to trade isn't a reason to trade. The SL discrepancy is a good reminder that bracket placement should be verified immediately after fill, not discovered later in a monitoring pass.
 
 
 ## Receipts
