@@ -29,7 +29,7 @@ L3 EXPANDED closes that gap with **136 net new tests** across both frAInk and th
 4. **`decision_engine.py` spec §5 completion** — D/E > 3.0 → `DON'T BUY` hard-fail on INVESTMENT; FCF deteriorating → -5pp concern penalty + chip on STANDARD/EXTENDED/INVESTMENT; valuation extreme (P/E > 50 AND growth ≤ 0) → `WATCH` override on STANDARD/EXTENDED/INVESTMENT. 13 new tests. `_is_pending_l3()` now honors record state — when an L3 factor ordinal is present, the slot consumes it.
 5. **`learning.db` v10 → v11 migration** — new `fundamentals_cache` table with composite PK `(ticker, payload_key)` + TTL semantics. Daily caching for ratings/insider/news/short-interest; quarterly for financials/balance/cashflow/13-F.
 6. **`outcome_log.csv` schema extension** — 7 new columns appended (5 factor ordinals + 2 raw short-interest inputs). Append-only invariant preserved; pre-L3 rows leave cells empty.
-7. **`/qa` Panel 6 "Shadow Factors"** — Fisher-exact lift vs baseline for `factor_short_squeeze` at 3d horizon, status badge `🟡 ACCRUING` / `🟢 READY` / `🔴 NEGATIVE`, tripwire target 2026-06-15.
+7. **`/qa` Panel 6 "Shadow Factors"** — Fisher-exact lift vs baseline for `factor_short_squeeze` at 3d horizon, status badge `🟡 ACCRUING` / `🟢 READY` / `🔴 NEGATIVE`, tripwire target 2026-06-15 → **RESET to 2026-07-18** (the data path was broken from ship — Polygon SI/short-vol returned stale rows and the ordinal never reached the harvested slot, so the tripwire read N=0; fixed 2026-06-18, clock restarts).
 8. **`/decide` L3 chips** — Polygon Related Tickers (peer momentum, UI-only no gate weight) + News sentiment 30d trend chip. Daily-cached.
 
 ---
@@ -80,7 +80,7 @@ Per spec §9 ship order:
 
 1. **DE-3 Decision Card V1** (~3-4h, next fresh terminal) — pipeline annotator threads L3 data onto every scanner record per-scan so the INVESTMENT verdict body reads real off the new ordinals. Today's ship wired the chips and the factor classifiers, but the pipeline doesn't yet populate `record["fundamentals_l3"]` and `record["factor_values"]["factor_*_value"]` per scan. DE-3 closes the loop.
 2. **v1.1 L3.5b — S3 flat-files + 13-F aggregator + historical backfill** (~4-6h + ~1-2h backfill, Saturday/Sunday or follow-on session) — promotes `factor_secular_cyclical` to 5-source + unlocks Polygon historical-data infra.
-3. **v1.1 L3.5 — promote `factor_short_squeeze` shadow → weighted** when tripwire fires (N≥30 outcomes at 3d AND 7d, Fisher-exact p<0.10 vs baseline, sign matches hypothesis). Target review date 2026-06-15.
+3. **v1.1 L3.5 — promote `factor_short_squeeze` shadow → weighted** when tripwire fires (N≥30 outcomes at 3d AND 7d, Fisher-exact p<0.10 vs baseline, sign matches hypothesis). Target review date 2026-06-15 → reset to 2026-07-18 (data-path fix 2026-06-18).
 4. **v1.1 CG — passive calendar gate** on/after 2026-05-22 (7d-22d horizon data maturity).
 5. **DE-5 v1.2 — quant model fit** per `project_quant_pivot_2026_05_07.md` (~5/22+).
 
@@ -90,6 +90,6 @@ Per spec §9 ship order:
 
 Decision Engine v1 turns the scanner's TA factor profile into a **per-ticker, per-horizon BUY NOW / BUY WHEN / WATCH / DON'T BUY / DON'T TOUCH** verdict. INVESTMENT-horizon verdicts always wanted fundamentals weight (§5.6 of the spec assigned 50% to `factor_fundamentals_score` and 15% to `factor_secular_cyclical`). Before today that weight was theatre. Today it's measured: P/E, P/S, D/E, FCF trend, revenue YoY growth, EPS trajectory, analyst consensus, insider Form 4 flow, sector rotation phase, news sentiment 30d trend — all collapsed onto a typed -2..+2 ordinal each, derived rollup at the fundamentals_score slot, hard-fail rules wired for INVESTMENT, all under a fail-soft + cached + zero-regression test envelope.
 
-`factor_short_squeeze` rides along in shadow mode because the QA Build v1 discipline (validate before you weight) is the only honest way to add new gate weight when you have N=0 historical outcomes. The Fisher-exact tripwire in `/qa` Panel 6 + the 2026-06-15 LIVING_TODO entry + the shadow-mode memory are three independent surfaces designed so the promote-or-kill decision can't fall through.
+`factor_short_squeeze` rides along in shadow mode because the QA Build v1 discipline (validate before you weight) is the only honest way to add new gate weight when you have N=0 historical outcomes. The Fisher-exact tripwire in `/qa` Panel 6 + the LIVING_TODO entry (target reset to 2026-07-18 after the 2026-06-18 data-path fix) + the shadow-mode memory are three independent surfaces designed so the promote-or-kill decision can't fall through. (Postscript: all three surfaces *did* nearly fall through — the recording path was silently broken for a month; caught 2026-06-18. The lesson: a tripwire must also verify data is ACCRUING, not just re-evaluate on a date.)
 
 The 13-F carve-out is the most honest thing about this ship. Faking 5-source today would have been one extra source on paper and no extra signal in reality. Naming the work properly (L3.5b, with its own scope and own tests) is the structural move.
